@@ -22,9 +22,9 @@ const findMax = (arr)=>{
         }
        
        
-        return max;
+        
     }
- 
+ return max;
 }
 console.log(findMax([40,50,80,70,10]));  
    
