@@ -12,24 +12,21 @@
 //  
 
 const findMax = (arr)=>{
-    let max;
+    let max =arr[0];
     for (let i = 0; i <= arr.length - 1; i++)
      {
-        if (arr[i] < arr[i + 1])
+        if (arr[i] >= max)
          {
-            continue;
+           max=arr[i];
 
         }
-        else if (arr[i + 1] < arr[i + 2]) 
-        {
-            continue;
-        }
-        max =arr[i];
+       
+       
         return max;
     }
  
 }
-console.log(findMax([50,40,80,70,10]));  
+console.log(findMax([40,50,80,70,10]));  
    
 
 // -------------------------------------------------------------------------------------------------------
