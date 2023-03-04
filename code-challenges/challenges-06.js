@@ -11,23 +11,18 @@
 // Output: 78
 //  
 
-const findMax = (arr)=>{
-    let max =arr[0];
-    for (let i = 0; i <= arr.length - 1; i++)
-     {
-        if (arr[i] >= max)
-         {
-           max=arr[i];
-
+const findMax = (arr) => {
+    let max;
+    max= arr[0];
+    for (let i = 0; i <= arr.length - 1; i++) {
+        if (arr[i] >= max) {
+            max = arr[i];
         }
-       
-       
-        
     }
- return max;
-}
-console.log(findMax([40,50,80,70,10]));  
-   
+   console.log(max);
+    return max;
+} 
+  findMax([12, 32, 22, 45, 78, 12, 50]) ;
 
 // -------------------------------------------------------------------------------------------------------
 
