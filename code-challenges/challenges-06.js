@@ -11,7 +11,7 @@
 // Output: 78
 //  
 
-const findMax = (arr) => {
+const findMax = (arr)=>{
     let max;
     max= arr[0];
     for (let i = 0; i <= arr.length - 1; i++) {
@@ -21,9 +21,8 @@ const findMax = (arr) => {
     }
    console.log(max);
     return max;
-} 
-  findMax([12, 32, 22, 45, 78, 12, 50]) ;
-
+    
+}
 // -------------------------------------------------------------------------------------------------------
 
 // -------------------------------------------------------------------------------------------------------
@@ -38,26 +37,21 @@ const findMax = (arr) => {
 //  
 
 const sumNums = (arr)=>{
-    let sum=0;
-    
-    for (let i=0; i<= arr.length-1;i++)
-    {
-        if (arr[i]< 0 ||arr[i]>= 0 )
-        {
-            sum=sum+arr[i];
+    let sum = 0;
+
+    for (let i = 0; i <= arr.length - 1; i++) {
+        if (arr[i] < 0 || arr[i] >= 0) {
+            sum = sum + arr[i];
         }
-        else 
-        {
+        else {
             continue;
         }
-        
+
     }
     return sum;
 
+
 }
-
-console.log(sumNums([20, "duaa" ,41,"Meme" ,80]));
-
 // -------------------------------------------------------------------------------------------------------
 
 // -------------------------------------------------------------------------------------------------------
@@ -70,19 +64,18 @@ console.log(sumNums([20, "duaa" ,41,"Meme" ,80]));
 // Input: ['C#', 'JS', 'Ruby','Python'] 
 // Output: ['Python','Ruby','JS','C#']
 
-const reverseArray = (arr)=>
-{
-  let revArray=[];
-    for(let i=arr.length-1;i>=0;i--)
-    {
-       
-        revArray.push( arr[i]);
-        
-   }
- 
-return revArray;
-} 
-console.log(reverseArray([20, "duaa" ,41,"Meme" ,80]));
+const reverseArray = (arr)=>{
+   
+        let revArray = [];
+        for (let i = arr.length - 1; i >= 0; i--) {
+    
+            revArray.push(arr[i]);
+    
+        }
+    
+        return revArray;
+    }
+
 // -------------------------------------------------------------------------------------------------------
 
 module.exports = {findMax , sumNums, reverseArray};
