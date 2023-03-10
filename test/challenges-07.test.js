@@ -6,7 +6,7 @@ const {
   cvFormatter,
   applicationsStatics,
   classesAvg,
-} = require("../code-challenges/challenges-07");
+} =require("../code-challenges/challenges-07");
 
 const data = {
   schoolName: "Al Farouk",
