@@ -24,16 +24,16 @@ const arrInc = (arr) => {
     for (let i =0;i< arr.length;i++)
     {
         result .push(arr[i]+10);
-
     }
     return result;
 }
+
 // -------------------------------------------------------------------------------------------------------
 
 
 // -------------------------------------------------------------------------------------------------------
 // Challenge 02:
-// optional: 
+// Required:
 
 //  Write a function that takes an array of decimals and round every value to the closest value 
 //  
@@ -44,12 +44,14 @@ const arrInc = (arr) => {
 // 
 const roundDecimals = (arr) => {
     // write your code here
+    const roundedNumbers = arr.map(num => Math.round(num));
+    return roundedNumbers;
 }
 // -------------------------------------------------------------------------------------------------------
 
 // -------------------------------------------------------------------------------------------------------
 // Challenge 03:
-// optional:
+// Required:
 // 
 // An owner of a factory wants to give a 100$ bonus for production department employees who worked *More than* 8 hours
 // and 50$ for those who worked less, given their data increase their salary and return the data back again 
@@ -112,8 +114,19 @@ const roundDecimals = (arr) => {
 //
 
 const employeesBonus = (arr) => {
+
     // write your code here
-}
+    
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i].workHours > 8) {
+        arr[i].salary = parseInt(arr[i].salary)+100+"$"; 
+        } else {
+            arr[i].salary = parseInt(arr[i].salary)+50+"$"; 
+        }
+        
+      }
+      return arr;
+    }
 // -------------------------------------------------------------------------------------------------------
 
 // -------------------------------------------------------------------------------------------------------
