@@ -25,22 +25,7 @@
 
 const LastWord = (str) => {
     // write your code here
-   
-        // Trim any whitespace at the end of the string
-        str = str.trim();
-        
-      
-        var lastIndex = str.lastIndexOf(' ');
-      
-       
-        if (lastIndex === -1) {
-          return str;
-        }
-       
-        return str.slice(lastIndex + 1);
-      }
-      
-
+}
 // -------------------------------------------------------------------------------------------------------
 
 // -------------------------------------------------------------------------------------------------------
@@ -54,15 +39,6 @@ const LastWord = (str) => {
 
 const LastWord_2 = (str) => {
     // write your code here
-    var words = str.split(' ');
-  
-    // If there is only one word, return it
-    if (words.length === 1) {
-      return words[0];
-    }
-    
-    // Otherwise, return the last word
-    return words[words.length - 1];
 }
 // -------------------------------------------------------------------------------------------------------
 
@@ -86,25 +62,6 @@ const LastWord_2 = (str) => {
 
 const replaceWords = (str) => {
     // write your code here
-    
-      
-        var words = str.split(' ');
-        
-        for (var i = 0; i < words.length; i++) {
-          if (words[i] === 'I') {
-            words.splice(i, 1, 'We');
-          } else if (words[i] === 'am') {
-            words.splice(i, 1, 'are');
-          } else if (words[i] === 'was') {
-            words.splice(i, 1, 'were');
-          }
-        }
-        
-   
-        return words.join(' ');
-       
-     
-      
 }
 // -------------------------------------------------------------------------------------------------------
 
@@ -142,29 +99,6 @@ const arrToStr = (arr) => {
 
 const letterCounter = (str) => {
     // write your code here
-    str = str.trim();
-    function getLastWord(str) {
-  // Trim any whitespace at the end of the string
-  str = str.trim();
-  
-  // Find the last index of a space character in the string
-  var lastIndex = str.lastIndexOf(' ');
-
-  // If there are no spaces in the string, return the whole string
-  if (lastIndex === -1) {
-    return str;
-  }
-  
-  // Otherwise, return the substring starting from the last space character
-  return str.slice(lastIndex + 1);
-}
-
-// Example usage:
-var str = "Hello world!";
-var lastWord = getLastWord(str);
-console.log(lastWord); // Outputs: "world!"
-
-
 }
 // -------------------------------------------------------------------------------------------------------
 
