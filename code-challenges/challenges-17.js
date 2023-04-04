@@ -14,27 +14,22 @@
 // Output: [50, 41, 32, 23, 14, 5, -4, 5, 14, 23, 32, 41, 50]
 //
 function recursionPattern(int1, int2) {
-   let result = [];
-  
-    
-    if (int1 <= 0) {
-      return result;
-    }
-  
-   
-    if ( int2>=int1  ) {
-      result.push(int1);
-      recursionPattern(int1 + int2, int2);
-    }
-  
-    
-    else {
-     result.push(int1)
-      recursionPattern(int1 - int2, int2);
-    }
-  
-    return result;
+  let arr=[];
+  let number=int1;
+  while (int1>=0){
+      arr.push(int1);
+      int1-=int2;
   }
+  if(int1<0){
+      arr.push(int1)
+      int1+=int2;
+      while(int1<=number){
+          arr.push(int1)
+          int1+=int2;
+      }
+  }
+  return arr;
+}
   
   
   
