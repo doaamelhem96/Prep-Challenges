@@ -24,7 +24,7 @@
         {
             "language": "javascript",
             "source": [
-                "\nfunction equalizeArray(arr) {\n  \n    let frequency = {};\n    let maxFrequency = 0;\n    \n    // Count the frequency of each number in the array\n    for (let i = 0; i < arr.length; i++) {\n      if (arr[i] in frequency ) {\n       frequency [arr[i]]++;\n      } else {\n        frequency [arr[i]] = 1;\n      }\n      maxFrequency  = Math.max(maxFrequency , frequency[arr[i]]);\n    }\n    \n    // Return the number of elements to delete\n    return arr.length - maxFrequency ;\n  }\n  \n  "
+                ""
             ],
             "outputs": []
         },

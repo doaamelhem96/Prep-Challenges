@@ -40,11 +40,7 @@
 
 const objectCounter = (obj) => {
     // write your code here
-    let result = obj.reduce ((acum)=>{
-        acum++;
-return acum;
-    },0)
-return result;
+
 }
 // -------------------------------------------------------------------------------------------------------
 
@@ -65,13 +61,7 @@ return result;
 
 const stringReverse = (str) => {
     // write your code here
-let arr =str.split (' ');
-let result =arr.reduce((acc, curr)=>{
-    acc.unshift(curr);
-    return acc
-}
-    ,[]);
-return result.join(" ")
+
 }
 // -------------------------------------------------------------------------------------------------------
 
