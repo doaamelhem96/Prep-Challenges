@@ -15,20 +15,8 @@
 //
 
 const wordLength = (str) => {
-    // Split the sentence into an array of words
-    const word = str.split(" ");
-  
-    // Find the middle word
-    const mid = Math.floor(word.length / 2);
-    const midWord = word[mid];
-  
-    // Get the length of the middle word
-    const length = midWord.length;
-  
-    return length;
-  };
-      
-
+    // write your code here
+}
 // -------------------------------------------------------------------------------------------------------
 
 
@@ -53,29 +41,6 @@ const wordLength = (str) => {
 
 const wordLetters = (str1, str2) => {
     // write your code here
-    const o1 = {};
-  for (const char of str1) {
-   o1[char] = (o1[char] || 0) + 1;
-  }
-
-  // Count the frequency of each character in str2
-  const o2 = {};
-  for (const char of str2) {
-    o2[char] = (o2[char] || 0) + 1;
-  }
-
-  // Compare the frequency maps
-  for (const char in o1) {
-    if (o1[char] !== o2[char]) {
-      return false;
-    }
-  }
-  for (const char in o2) {
-    if (o2[char] !== o1[char]) {
-      return false;
-    }
-  }
-  return true;
 }
 // -------------------------------------------------------------------------------------------------------
 
@@ -100,6 +65,25 @@ const wordLetters = (str1, str2) => {
 
 const targetIndex = (arr, int) => {
     // write your code here
+   
+        let num1 = 0;
+        let num2 = arr.length - 1;
+    
+        while (num1 <= num2) {
+            let mid = Math.floor((num1+ num2) / 2);
+            if (arr[mid] === int) {
+                return mid;
+            } else if (arr[mid] < int) {
+                num1 = mid + 1;
+            } else {
+               num2 = mid - 1;
+            }
+        }
+    
+       
+        return num1;
+    
+    
 }
 // -------------------------------------------------------------------------------------------------------
 
