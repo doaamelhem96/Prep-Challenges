@@ -1,0 +1,67 @@
+{
+    "cells": [
+        {
+            "language": "markdown",
+            "source": [
+                "## Hacker Rank\n\nFor Thursdays you will be solving some selected challenges on HackerRank, please create an account if you don't have then\nFollow the links below:\nread them carefully and solve them then copy-paste your solution below in Code Block"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "### **Required**:"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "#####  [Append And Delete](https://www.hackerrank.com/challenges/append-and-delete/problem?isFullScreen=true)\n\nSolution:"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "javascript",
+            "source": [
+                "function appendAndDelete(s, t, k) {\n  let sArr = s.split(\"\")\n  let tArr = t.split(\"\")\n  let count = 0\n  for (let i = 0; i === count && i < s.length; i++) {\n      if (sArr[i] === tArr[i]) {\n          count++\n      }\n  }\n  \n  let tMinusCount = t.length - count\n  let sMinusCount = s.length - count\n  \n  let STK = k - (tMinusCount + sMinusCount)\n  \n  if (tMinusCount + sMinusCount < k && t.length + s.length > k && STK % 2 !== 0) {\n      return \"No\"\n  } else if (tMinusCount + sMinusCount <= k) {\n      return \"Yes\"\n  } else {\n      return \"No\"\n  }\n}"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "### **Optional**:"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "#####  [Encryption](https://www.hackerrank.com/challenges/encryption/problem?isFullScreen=true)\n\nSolution:"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "javascript",
+            "source": [
+                "function encryption(s) {\n   \n    s = s.replace(/\\s+/g, '').toLowerCase();\n    \n   \n    const n = s.length;\n    \n\n    let rows = Math.floor(Math.sqrt(n));\n    let cols = Math.ceil(Math.sqrt(n));\n    if (rows * cols < n) {\n        rows++;\n    }\n    \n \n    const grid = [];\n    for (let i = 0; i < rows; i++) {\n        grid.push([]);\n        for (let j = 0; j < cols; j++) {\n            const index = i * cols + j;\n            if (index < n) {\n                grid[i][j] = s.charAt(index);\n            }\n        }\n    }\n    \n    let result = '';\n    for (let j = 0; j < cols; j++) {\n        for (let i = 0; i < rows; i++) {\n            if (grid[i][j] !== undefined) {\n                result += grid[i][j];\n            }\n        }\n        if (j < cols - 1) {\n            result += ' ';\n        }\n    }\n    \n    return result;\n}\n"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "#####  [The Time In Words](https://www.hackerrank.com/challenges/the-time-in-words/problem?isFullScreen=true)\n\nSolution:"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "javascript",
+            "source": [
+                "const words = [\n    \"\",\n    \"one\",\n    \"two\",\n    \"three\",\n    \"four\",\n    \"five\",\n    \"six\",\n    \"seven\",\n    \"eight\",\n    \"nine\",\n    \"ten\",\n    \"eleven\",\n    \"twelve\",\n    \"thirteen\",\n    \"fourteen\",\n    \"quarter\",\n    \"sixteen\",\n    \"seventeen\",\n    \"eighteen\",\n    \"nineteen\",\n    \"twenty\",\n    \"twenty one\",\n    \"twenty two\",\n    \"twenty three\",\n    \"twenty four\",\n    \"twenty five\",\n    \"twenty six\",\n    \"twenty seven\",\n    \"twenty eight\",\n    \"twenty nine\",\n    \"half\",\n  ];\n\n  if (m === 0) {\n    return `${words[h]} o' clock`;\n  } else if (m === 1) {\n    return `${words[m]} minute past ${words[h]}`;\n  } else if (m === 15 || m === 30) {\n    return `${words[m]} past ${words[h]}`;\n  } else if (m === 45) {\n    return `${words[60 - m]} to ${words[h + 1]}`;\n  } else if (m < 30) {\n    return `${words[m]} minutes past ${words[h]}`;\n  } else {\n    return `${words[60 - m]} minutes to ${words[h + 1]}`;\n  }\n}\n\n\nfunction main() {\n    const ws = fs.createWriteStream(process.env.OUTPUT_PATH);\n\n    const h = parseInt(readLine().trim(), 10);\n\n    const m = parseInt(readLine().trim(), 10);\n\n    const result = timeInWords(h, m);\n\n    ws.write(result + '\\n');\n\n    ws.end();\n}\n"
+            ],
+            "outputs": []
+        }
+    ]
+}
